@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pymt-lab/pymt_permamodel/archive/v{{ version }}.tar.gz
-  sha256: cfc0d1ae6acfa23dc4309a80f48aed576abf3f90533b220cfb3eb5a9ae5bf857
+  sha256: e4d930a762b028959d177c02a739930ae9159ca7eea581a881801f538b0a8bbb
 
 build:
   noarch: python
