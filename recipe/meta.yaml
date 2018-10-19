@@ -1,12 +1,12 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: pymt_permamodel
   version: {{ version }}
 
 source:
-  url: https://github.com/mcflugen/pymt_permamodel/archive/v{{ version }}.tar.gz
-  sha256: 2b4fb2419f79accb140ec47bbf8f9cda2326aca2fe491433f4340ff714b2705d
+  url: https://github.com/pymt-lab/pymt_permamodel/archive/v{{ version }}.tar.gz
+  sha256: cfc0d1ae6acfa23dc4309a80f48aed576abf3f90533b220cfb3eb5a9ae5bf857
 
 build:
   noarch: python
@@ -17,6 +17,7 @@ requirements:
   host:
     - python
     - pip
+    - model_metadata
   run:
     - python
     - permamodel
