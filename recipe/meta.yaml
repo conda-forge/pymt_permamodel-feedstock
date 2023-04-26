@@ -27,12 +27,12 @@ test:
     - pymt_permamodel
 
 about:
-  home: https://github.com/mcflugen/pymt_permamodel
+  home: https://github.com/pymt-lab/pymt_permamodel
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Python package that wraps the permamodel BMI.
-  dev_url: https://github.com/mcflugen/pymt_permamodel
+  dev_url: https://github.com/pymt-lab/pymt_permamodel
 
 extra:
   recipe-maintainers:
