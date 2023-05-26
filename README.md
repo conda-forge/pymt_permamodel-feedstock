@@ -3,13 +3,13 @@ About pymt_permamodel-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymt_permamodel-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/mcflugen/pymt_permamodel
+Home: https://github.com/pymt-lab/pymt_permamodel
 
 Package license: MIT
 
 Summary: Python package that wraps the permamodel BMI.
 
-Development: https://github.com/mcflugen/pymt_permamodel
+Development: https://github.com/pymt-lab/pymt_permamodel
 
 Current build status
 ====================
@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@mcflugen](https://github.com/mcflugen/)
+* [@mdpiper](https://github.com/mdpiper/)
 
