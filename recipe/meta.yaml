@@ -1,4 +1,5 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.3" %}
+{% set python_min = python_min|default("3.10") %}
 
 package:
   name: pymt_permamodel
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pymt-lab/pymt_permamodel/archive/v{{ version }}.tar.gz
-  sha256: 2f90e539963d2e3cef341121bbbaa9634ab240cc9d0021bf719a692b9f555694
+  sha256: 46b0e75a53dbb0800aaaa3c709e6fd5774923babdc9cc094a9ffaaeb7d23247f
 
 build:
   noarch: python
@@ -15,16 +16,26 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}.*
     - pip
+    - setuptools
     - model_metadata
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - permamodel
 
 test:
+  requires:
+    - python ={{ python_min }}
+    - bmi-tester
   imports:
     - pymt_permamodel
+  source_files:
+    - examples
+  commands:
+    - bmi-test pymt_permamodel.bmi:FrostNumber --config-file=${PWD}/examples/Frostnumber_example_singlesite_singleyear.cfg --root-dir=examples -vvv  # [unix]
+    - bmi-test pymt_permamodel.bmi:Ku --config-file=${PWD}/examples/Ku_method.cfg --root-dir=examples -vvv  # [unix]
+    - bmi-test pymt_permamodel.bmi:KuEnhanced --config-file=${PWD}/examples/Ku_bmi_example_config.toml --root-dir=examples -vvv  # [unix]
 
 about:
   home: https://github.com/pymt-lab/pymt_permamodel
