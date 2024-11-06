@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.3" %}
 
 package:
   name: pymt_permamodel
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pymt-lab/pymt_permamodel/archive/v{{ version }}.tar.gz
-  sha256: 2f90e539963d2e3cef341121bbbaa9634ab240cc9d0021bf719a692b9f555694
+  sha256: 46b0e75a53dbb0800aaaa3c709e6fd5774923babdc9cc094a9ffaaeb7d23247f
 
 build:
   noarch: python
