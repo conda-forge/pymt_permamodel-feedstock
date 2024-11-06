@@ -1,4 +1,5 @@
 {% set version = "0.2.3" %}
+{% set python_min = python_min|default("3.10") %}
 
 package:
   name: pymt_permamodel
@@ -15,15 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}.*
     - pip
     - setuptools
     - model_metadata
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - permamodel
 
 test:
+  requires:
+    - python ={{ python_min }}
   imports:
     - pymt_permamodel
 
