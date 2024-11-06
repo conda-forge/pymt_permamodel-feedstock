@@ -27,8 +27,15 @@ requirements:
 test:
   requires:
     - python ={{ python_min }}
+    - bmi-tester
   imports:
     - pymt_permamodel
+  source_files:
+    - examples
+  commands:
+    - bmi-test pymt_permamodel.bmi:FrostNumber --config-file=${PWD}/examples/Frostnumber_example_singlesite_singleyear.cfg --root-dir=examples -vvv  # [unix]
+    - bmi-test pymt_permamodel.bmi:Ku --config-file=${PWD}/examples/Ku_method.cfg --root-dir=examples -vvv  # [unix]
+    - bmi-test pymt_permamodel.bmi:KuEnhanced --config-file=${PWD}/examples/Ku_bmi_example_config.toml --root-dir=examples -vvv  # [unix]
 
 about:
   home: https://github.com/pymt-lab/pymt_permamodel
